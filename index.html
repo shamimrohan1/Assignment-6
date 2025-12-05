@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <!-- font awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <!--  tailwind-daisyui -->
+       <!-- tailwind + daisyui -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- fons integration -hind silliguri -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- style.css -->
+     <link rel="stylesheet" href="style.css">
+     <style>
+        .active{
+            background-color: black;
+            color:white;
+        }
+     </style>
+</head>
+<body>
+    <header class="">
+        <!-- fast header -->
+         <div class="flex  flex-col sm:flex-row  items-center justify-between bg-[#15803D] py-4 px-8">
+            <h1 class=" font-bold text-white">Green Earth</h1>
+            <div>
+                <ul class="flex items-center gap-8 text-white font-medium">
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>Plan a Tree</li>
+                </ul>
+            </div>           
+            <div>
+                <button class="btn btn-active btn-warning text-[#12803D] rounded-full">Plan a tree</button>
+            </div>
+         </div>
+         <!-- section for header -->
+          <section class="flex flex-col sm:flex-row  items-center justify-between bg-[#CFF0DC]">
+            <img src="./B12A06-Green-Earth/assets/hero-leaf1.png" alt=""/>
+            <div class=" text-center">
+                <h1 class="font-bold text-5xl">Plant a Tree, Grow a Future</h1>
+                <p>join our mission to plan 1 million trees and make the Earth Green 
+                    to furture <br/>generation</p>
+                    <button class="btn btn-active btn-warning text-[#12803D] rounded-full">Plan a tree</button>
+            </div>
+            <img src="./B12A06-Green-Earth/assets/hero-leaf2.png" alt=""/>
+          </section>
+    </header>
+         <h1 class="text-xl font-bold text-center rounded-2xl mt-10">Choose Your Trees</h1>
+
+
+
+         <!-- main section -->
+    <main class="grid grid-cols-12 gap-5 mt-2 w-11/12 mx-auto min-h-screen py-4">
+                                                        <!--  1 section -->
+        <section class="bg-[#DCFCE7] col-span-2 rounded-xl p-3 mb-2">
+            <h1 class="text-xl font-bold text-center bg-white rounded-2xl">Categories</h1>
+         
+             <div class="grid grid-cols-1 gap-3 sticky top-0" id="category-categories">
+        <!---  <button class="btn btn-block shadow btn-category bg-[#15803D]">All trees</button>
+                <button class="btn btn-block shadow btn-category bg-[#15803D]">Flowering Trees</button>
+                <button class="btn btn-block shadow btn-category bg-[#15803D]">Shade Trees</button>
+                <h1>Medicinal Trees</h1>
+                <h1>Timber Trees</h1>
+                <h1>Evergreen Trees</h1>
+                <h1>Omamental Plants</h1>
+                <h1>Camboo</h1>
+                <h1>Climbers</h1>
+                <h1>Aquatic Plants</h1>             -->
+            </div>
+        </section>
+                                                        <!-- 2 section -->
+    <section class="col-span-7 p-3">
+        <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">   -->
+
+                     <!-- lodding fanction -->
+                      <div id="loading-spinner" class="min-h-[60vh] flex flex-col justify-center items-center bg-white
+                      hidden">
+                             <span class="loading loading-dots loading-xl"></span>
+                      </div>
+
+        <!-- card card number-1 -->
+          <div id="Plant-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sticky top-0">
+             <div class="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden m-4 ">
+                <img class="w-full h-48 object-cover" src="./B12A06-Green-Earth/assets/about.png" alt="Tree Image">
+            <div class="p-5">
+                <h2 class="text-2xl font-bold mb-2">Mango Tree</h2>
+                <p class="text-gray-700 mb-4">A beautiful fruit-bearing tree perfect for your garden or backyard.</p>
+                  <div class="flex items-center justify-between">
+                    <button class="btn btn-sm bg-[#15803D] rounded-full">frult Tree</button>
+                     <span class="text-green-600 font-semibold">$250</span>
+                 </div>
+            </div>
+            <button class="btn btn-block shadow text-white bg-[#15803D] rounded-full">Add Cart</button>
+            </div>
+          </div>
+
+
+
+        <!-- card number-2 -->
+            <!-- <div class="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden m-4">
+                <img class="w-full h-48 object-cover" src="./B12A06-Green-Earth/assets/about.png" alt="Tree Image">
+            <div class="p-5">
+                <h2 class="text-2xl font-bold mb-2">Mango Tree</h2>
+                <p class="text-gray-700 mb-4">A beautiful fruit-bearing tree perfect for your garden or backyard.</p>
+                  <div class="flex items-center justify-between">
+                    <button class="btn btn-sm bg-[#15803D] rounded-full">frult Tree</button>
+                     <span class="text-green-600 font-semibold">$250</span>
+                 </div>
+            </div>
+            <button class="btn btn-block shadow text-white bg-[#15803D] rounded-full">Add Cart</button>
+            </div> -->
+                <!-- card mumber-3 -->
+            <!-- <div class="max-w-sm bg-white rounded-xl shadow-lg overflow-hidden m-4">
+                <img class="w-full h-48 object-cover" src="./B12A06-Green-Earth/assets/about.png" alt="Tree Image">
+            <div class="p-5">
+                <h2 class="text-2xl font-bold mb-2">Mango Tree</h2>
+                <p class="text-gray-700 mb-4">A beautiful fruit-bearing tree perfect for your garden or backyard.</p>
+                  <div class="flex items-center justify-between">
+                    <button class="btn btn-sm bg-[#15803D] rounded-full">frult Tree</button>
+                     <span class="text-green-600 font-semibold">$250</span>
+                 </div>
+            </div>
+            <button class="btn btn-block shadow text-white bg-[#15803D] rounded-full">Add Cart</button>
+            </div> -->
+    <!-- </div>     -->
+      </section>
+
+                                            <!-- 3 section -->
+    <section class="col-span-3 border-[#FEBF00] border-2 rounded-xl">
+        <h1 class="text-xl font-bold text-center rounded-2xl">Your Cart </h1>
+        <div class="divider"></div>
+
+     <div class="grid grid-cols-1 gap-5" id="cart-container">
+          <!-- sample cart  -->
+
+          <!-- <div class="p-1 bg-white flex gap-3 shadow rounded-xl relative">
+            <div class="img">
+              <img
+                src="https://www.themealdb.com/images/media/meals/1520081754.jpg"
+                alt=""
+                class="w-[50px] rounded-xl h-[50px] object-cover"
+              />
+            </div>
+            <div class="flex-1">
+              <h1 class="text-xs font-bold">
+                Mango Tree
+              </h1>
+
+              <div class="">
+                <h2 class="text-yellow-600 font-semibold">
+                  $ <span class="price">500*1</span> BDT
+                </h2>
+              </div>
+            </div>
+            <div
+              class="w-6 h-6 flex justify-center items-center bg-red-600 rounded-full absolute -top-1 -right-1 text-white"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div> -->
+      </div>
+        
+        <div class="bg-[#FEBF00] mt-10">
+            <h2 class="p-3 font-bold text-black">Total $<span id="cart-Total">0</span>BDT</h2>
+        </div>
+        
+    </section>
+
+            
+    </main>
+    <!--   About the cammpain part -->
+     <section class="px-6 lg:px-20">
+        <h1 class=" text-center font-bold text-3xl mt-10 mb-5  ">About the Campaingn</h1>
+        <div class="p-4 bg-white flex justify-center items-center gap-6 rounded-xl mr-60 ml-60">
+            <div class="max-w-sm  rounded-xl shadow-lg overflow-hidden  ">
+                     <img src="./B12A06-Green-Earth/assets/about.png" 
+                     alt="Plant Image" 
+                    class="w-full  object-cover">
+            </div>
+            <div class="p-10 flex-1">
+                    <p>Green Earth is a global tree plantation initiative dedicated to fighting 
+                    climate change. Since our start, we’ve planted over 500,000 trees worldwide.
+                    By joining our campaign, you help restore forests,
+                    create habitats for wildlife, and combat global warming.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+            </div>
+        </div>
+     </section>
+
+<!--  our impact section  -->
+  <section class="w-full h-[400px] bg-[#CFF0DC] py-20 ">
+                <h1 class="text-center font-bold text-2xl mt-5 mb-5 ">Our Impact</h1>
+             <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4">
+                 <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center w-[480.7px] h-[156px]">
+            <h2 class="text-4xl font-extrabold text-green-700">500K+</h2>
+            <p class="mt-2 text-gray-700">Trees planted</p>
+                </div>
+                <!-- Card-2 -->
+                <div class="bg-white rounded-xl p-8  text-center w-[480.7px] h-[156px]">
+            <h2 class="text-4xl font-extrabold text-green-700">120+</h2>
+            <p class="mt-2 text-gray-700">Communities Involved</p>
+                </div>
+                <!-- card-3 -->
+                <div class=" bg-white rounded-xl p-8 text-center w-[480.7px] h-[156px]">
+                <h2 class="text-4xl font-extrabold text-green-700">30+</h2>
+                <p class="mt-2 text-gray-700">Countries Reached</p>
+                </div>
+          </div>
+
+
+  </section>
+
+  <!-- FROM SECTION -->
+   <section class="w-full h-[450px] bg-[#166534] flex flex-col justify-center items-center">
+      <section class="w-full h-[591px] bg-[#166534] flex flex-col justify-center items-center">
+            <h1 class="font-bold text-center text-4xl text-white px-4 py-2 mt-10">Plant a Tree Today</h1>
+         
+       <div class="w-[650px] h-[311px] bg-[#15803D] p-10 rounded-xl
+                flex flex-col justify-center items-center gap-4">
+                <input class="bg-white w-[80%] p-3 rounded-lg text-black" type="Your Name"  placeholder="Your Name">
+                <input class="bg-white w-[80%] p-3 rounded-lg text-black" type="Your Email Address" placeholder="Your Email Address">
+                <input class="bg-white w-[80%] p-3 rounded-lg text-black" type="number of Tress" placeholder="Number of Tress">
+                <button class="bg-[#FEBF00] w-[80%] text-green-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-400">Donate Now </button>
+        </div>
+      </section>
+    </section>
+
+     <section class="w-full h-[72px] bg-[#14532D]  flex justify-center items-center">
+      <p class="font-bold text-white ">© 2025 Green Earth. All Rights Reserved.</p>
+    </section>
+
+    
+
+  <!-- modal section -->
+   <!-- Open the modal using ID.showModal() method -->
+<!-- You can open the modal using ID.showModal() method -->
+ <section class="mt-20">
+<!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+    <div class="" id="details-container">
+        <div class="">
+            <img src="https://i.ibb.co.com/FkH6MRhR/banyan-min.jpg" alt="">
+
+        </div>
+    </div>
+  </div>
+</dialog>
+</section>
+
+ 
+
+
+
+
+    <script src="script/index.js"></script>
+</body>
+
+</html>
